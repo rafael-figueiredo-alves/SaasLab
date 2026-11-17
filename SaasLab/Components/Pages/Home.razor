@@ -1,0 +1,47 @@
+﻿@page "/"
+@layout Layout.PublicLayout
+
+<PageTitle>SaasLab: gestão simples para a sua empresa</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="Conheça o SaasLab: planos, recursos e relatórios para a sua empresa." />
+    <meta property="og:title" content="SaasLab" />
+    <meta property="og:type" content="website" />
+</HeadContent>
+
+<section class="hero">
+    <h1>Gestão simples para a sua empresa</h1>
+    <p>Cadastre sua empresa, convide sua equipe e acompanhe tudo em relatórios.</p>
+    <a class="btn" href="/entrar">Acessar o sistema</a>
+</section>
+
+<section id="planos" class="plans">
+    <h2>Planos</h2>
+    <div class="plan-grid">
+        @foreach (var plan in _plans)
+        {
+            <article class="plan">
+                <h3>@plan.Name</h3>
+                <p class="price">@plan.Price.ToString("C2", new System.Globalization.CultureInfo("pt-BR")) / mês</p>
+                <ul>
+                    @foreach (var feature in plan.Features)
+                    {
+                        <li>@feature</li>
+                    }
+                </ul>
+            </article>
+        }
+    </div>
+</section>
+
+@code {
+    private sealed record Plan(string Name, decimal Price, string[] Features);
+
+    // Fixo por enquanto; na Parte 3 virá da tabela de planos do banco.
+    private static readonly Plan[] _plans =
+    [
+        new("Básico", 49.90m, ["1 empresa", "3 usuários", "Relatórios padrão"]),
+        new("Profissional", 129.90m, ["1 empresa", "15 usuários", "Relatórios personalizados"]),
+        new("Empresarial", 349.90m, ["Várias empresas", "Usuários ilimitados", "Suporte prioritário"]),
+    ];
+}

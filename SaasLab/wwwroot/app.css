@@ -1,0 +1,82 @@
+:root {
+    --cor: #1f4fd8;
+    --texto: #1c1c28;
+    --fundo: #fafafa;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    border-bottom: 1px solid #e5e5ec;
+}
+
+    .site-header nav a {
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--texto);
+    }
+
+.brand {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--cor);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    background: var(--cor);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.plan {
+    background: #fff;
+    border: 1px solid #e5e5ec;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cor);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
