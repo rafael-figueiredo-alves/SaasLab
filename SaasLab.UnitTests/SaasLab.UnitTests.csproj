@@ -14,11 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="bunit" Version="2.15.2" />
     <PackageReference Include="xunit.v3.mtp-v2" Version="3.2.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SaasLab.Application\SaasLab.Application.csproj" />
     <ProjectReference Include="..\SaasLab.Domain\SaasLab.Domain.csproj" />
+    <ProjectReference Include="..\SaasLab\SaasLab.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>

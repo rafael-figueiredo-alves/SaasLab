@@ -1,9 +1,11 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="SaasLab.Application/SaasLab.Application.csproj" Id="90cdacd6-d747-478a-9914-416cc2d6c77c" />
     <Project Path="SaasLab.Domain/SaasLab.Domain.csproj" Id="8d4c085b-dc23-422b-9da9-f4457e60a659" />
     <Project Path="SaasLab/SaasLab.Web.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="SaasLab.IntegrationTests/SaasLab.IntegrationTests.csproj" Id="c38e017d-8950-431d-841b-12da9983fdcc" />
     <Project Path="SaasLab.UnitTests/SaasLab.UnitTests.csproj" Id="218a3a93-7f70-4f84-a811-55bf6289c175" />
   </Folder>
 </Solution>

@@ -1,0 +1,30 @@
+﻿@inherits SecaoPlanosBase
+@using System.Globalization
+
+<section id="planos" class="plans">
+    <h2>Planos</h2>
+
+    @if (Planos.Count == 0)
+    {
+        <p>Planos em breve.</p>
+    }
+    else
+    {
+        <div class="plan-grid">
+            @foreach (var plano in Planos)
+            {
+                <article class="plan">
+                    <h3>@plano.Nome</h3>
+                    <p class="price">@plano.PrecoMensal.ToString("C2", Cultura) / mês</p>
+                    <ul>
+                        @foreach (var recurso in plano.Recursos)
+                        {
+                            <li>@recurso</li>
+                        }
+                    </ul>
+                </article>
+            }
+        </div>
+    }
+</section>
+
