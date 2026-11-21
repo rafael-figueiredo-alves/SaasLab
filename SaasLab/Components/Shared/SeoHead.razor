@@ -1,0 +1,20 @@
+﻿@inherits SeoHeadBase
+
+<PageTitle>@Titulo</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="@Descricao" />
+    <link rel="canonical" href="@UrlCanonica" />
+    <meta property="og:title" content="@Titulo" />
+    <meta property="og:description" content="@Descricao" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@UrlCanonica" />
+    @if (!Indexavel)
+    {
+        <meta name="robots" content="noindex, nofollow" />
+    }
+</HeadContent>
+
+@code {
+
+}
